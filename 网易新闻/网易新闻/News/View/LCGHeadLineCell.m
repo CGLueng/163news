@@ -7,6 +7,8 @@
 //
 
 #import "LCGHeadLineCell.h"
+#import "LCGHeadLineModel.h"
+#import <UIImageView+WebCache.h>
 
 @interface LCGHeadLineCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -17,5 +19,12 @@
 @end
 
 @implementation LCGHeadLineCell
+- (void)setHeadline:(LCGHeadLineModel *)headline {
 
+    _headline = headline;
+    self.titleLabel.text = headline.title;
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:headline.imgsrc]];
+    
+    self.pageControll.currentPage = self.tag;
+}
 @end

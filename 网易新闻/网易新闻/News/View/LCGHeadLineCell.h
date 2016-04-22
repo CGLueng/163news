@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class LCGHeadLineModel;
 @interface LCGHeadLineCell : UICollectionViewCell
-
+@property (nonatomic,strong) LCGHeadLineModel *headline;
 @end

@@ -8,11 +8,11 @@
 
 #import "LCGHeadLineController.h"
 #import "LCGHeadLineCell.h"
-#import "LCGApiManager.h"
+#import "LCGHeadLineModel.h"
 
 @interface LCGHeadLineController ()
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *layout;
-
+@property (nonatomic,strong) NSArray *data;
 @end
 
 @implementation LCGHeadLineController
@@ -28,10 +28,9 @@ static NSString * const reuseIdentifier = @"HeadLine";
 
 /** 加载头条数据 */
 - (void)loadData {
-    [[LCGApiManager sharedApi]requestWithURL:@"ad/headline/0-4.html" success:^(id responseObject) {
-        NSLog(@"成功%@",responseObject);
-    } error:^(NSError *errorInfo) {
-        NSLog(@"错误%@",errorInfo);
+    [LCGHeadLineModel headLineDatasWithURL:@"ad/headline/0-4.html" success:^(NSArray *headline) {
+        self.data = headline;
+        [self.collectionView reloadData];
     }];
 }
 
@@ -55,13 +54,15 @@ static NSString * const reuseIdentifier = @"HeadLine";
 
 #pragma mark - 代理方法
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 4;
+    return self.data.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     LCGHeadLineCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    cell.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+    cell.tag = indexPath.item;
+    
+    cell.headline = self.data[indexPath.item];
     
     return cell;
 }

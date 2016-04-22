@@ -19,6 +19,7 @@
 		F66F6A4D1CC9C2F500470FB3 /* LCGHeadLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66F6A4C1CC9C2F500470FB3 /* LCGHeadLineController.m */; };
 		F66F6A501CC9C83300470FB3 /* LCGHeadLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F66F6A4F1CC9C83300470FB3 /* LCGHeadLineCell.m */; };
 		F6EF40201CC9E1C8006331A8 /* LCGApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EF401F1CC9E1C8006331A8 /* LCGApiManager.m */; };
+		F6EF40271CCA1E76006331A8 /* LCGHeadLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EF40261CCA1E76006331A8 /* LCGHeadLineModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		F66F6A4F1CC9C83300470FB3 /* LCGHeadLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGHeadLineCell.m; sourceTree = "<group>"; };
 		F6EF401E1CC9E1C8006331A8 /* LCGApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGApiManager.h; sourceTree = "<group>"; };
 		F6EF401F1CC9E1C8006331A8 /* LCGApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGApiManager.m; sourceTree = "<group>"; };
+		F6EF40251CCA1E76006331A8 /* LCGHeadLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGHeadLineModel.h; sourceTree = "<group>"; };
+		F6EF40261CCA1E76006331A8 /* LCGHeadLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGHeadLineModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,8 @@
 		F66F6A471CC9C25100470FB3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F6EF40251CCA1E76006331A8 /* LCGHeadLineModel.h */,
+				F6EF40261CCA1E76006331A8 /* LCGHeadLineModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F625F6341CC9DEEC00744AF5 /* LCGHTTPManager.m in Sources */,
+				F6EF40271CCA1E76006331A8 /* LCGHeadLineModel.m in Sources */,
 				F66F6A501CC9C83300470FB3 /* LCGHeadLineCell.m in Sources */,
 				F6695ECB1CC91C3700A917B0 /* AppDelegate.m in Sources */,
 				F66F6A4D1CC9C2F500470FB3 /* LCGHeadLineController.m in Sources */,
