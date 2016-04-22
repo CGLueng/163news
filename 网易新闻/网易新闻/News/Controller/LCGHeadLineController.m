@@ -29,8 +29,13 @@ static NSString * const reuseIdentifier = @"HeadLine";
 /** 加载头条数据 */
 - (void)loadData {
     [LCGHeadLineModel headLineDatasWithURL:@"ad/headline/0-4.html" success:^(NSArray *headline) {
-        self.data = headline;
+        NSMutableArray *tempData = [NSMutableArray arrayWithArray:headline];
+        [tempData insertObject:[headline lastObject] atIndex:0];
+        [tempData addObject:[headline firstObject]];
+        self.data = tempData.copy;
         [self.collectionView reloadData];
+        
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
     }];
 }
 
@@ -60,12 +65,23 @@ static NSString * const reuseIdentifier = @"HeadLine";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     LCGHeadLineCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    cell.tag = indexPath.item;
+    cell.tag = indexPath.item - 1;
     
     cell.headline = self.data[indexPath.item];
     
     return cell;
 }
 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+
+    NSInteger index = scrollView.contentOffset.x / self.collectionView.bounds.size.width;
+    
+    if (index == self.data.count - 1) {
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+    }else if (index == 0) {
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.data.count - 2 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+    }
+
+}
 
 @end
