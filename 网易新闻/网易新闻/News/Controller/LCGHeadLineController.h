@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LCGHeadLineController : UICollectionViewController
+@interface LCGHeadLineController : UIViewController
 
 @end
