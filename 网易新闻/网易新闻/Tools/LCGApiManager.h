@@ -12,5 +12,7 @@
 
 + (instancetype)sharedApi;
 
-- (void)requestWithURL:(NSString *)url success:(void(^)(id responseObject))success error:(void(^)(NSError *errorInfo))error;
+- (void)requestHeadLineWithURL:(NSString *)url success:(void(^)(id responseObject))success error:(void(^)(NSError *errorInfo))error;
+
+- (void)requesNewstWithURL:(NSString *)url success:(void(^)(id responseObject))success error:(void(^)(NSError *errorInfo))error;
 @end

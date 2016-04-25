@@ -27,7 +27,7 @@
     
     NSAssert(success != nil, @"回到不能为空");
 
-    [[LCGApiManager sharedApi]requestWithURL:url success:^(NSDictionary * responseObject) {
+    [[LCGApiManager sharedApi]requestHeadLineWithURL:url success:^(NSDictionary * responseObject) {
 
         NSString *key = responseObject.keyEnumerator.nextObject;
         NSArray *data = responseObject[key];

@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5FED908E70DA2504B9781760 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A47B8A9AF72B921493AE3042 /* libPods.a */; };
+		F61FD1511CCE6A3F0019118F /* LCGNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F61FD1501CCE6A3F0019118F /* LCGNewsModel.m */; };
 		F625F6341CC9DEEC00744AF5 /* LCGHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F625F6331CC9DEEC00744AF5 /* LCGHTTPManager.m */; };
+		F642E05B1CCE72D900F848F8 /* LCGNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F642E05A1CCE72D900F848F8 /* LCGNewsController.m */; };
+		F642E05F1CCE764200F848F8 /* NSObject+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = F642E05E1CCE764200F848F8 /* NSObject+Log.m */; };
 		F6695EC81CC91C3700A917B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6695EC71CC91C3700A917B0 /* main.m */; };
 		F6695ECB1CC91C3700A917B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6695ECA1CC91C3700A917B0 /* AppDelegate.m */; };
 		F6695ED31CC91C3700A917B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6695ED21CC91C3700A917B0 /* Assets.xcassets */; };
@@ -43,8 +46,14 @@
 		346F0AD842D120F232690ABC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A47B8A9AF72B921493AE3042 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E290866D2141735E2CB62B00 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F61FD14F1CCE6A3F0019118F /* LCGNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGNewsModel.h; sourceTree = "<group>"; };
+		F61FD1501CCE6A3F0019118F /* LCGNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGNewsModel.m; sourceTree = "<group>"; };
 		F625F6321CC9DEEC00744AF5 /* LCGHTTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGHTTPManager.h; sourceTree = "<group>"; };
 		F625F6331CC9DEEC00744AF5 /* LCGHTTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGHTTPManager.m; sourceTree = "<group>"; };
+		F642E0591CCE72D900F848F8 /* LCGNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGNewsController.h; sourceTree = "<group>"; };
+		F642E05A1CCE72D900F848F8 /* LCGNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGNewsController.m; sourceTree = "<group>"; };
+		F642E05D1CCE764200F848F8 /* NSObject+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Log.h"; sourceTree = "<group>"; };
+		F642E05E1CCE764200F848F8 /* NSObject+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Log.m"; sourceTree = "<group>"; };
 		F6695EC31CC91C3700A917B0 /* 网易新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6695EC71CC91C3700A917B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F6695EC91CC91C3700A917B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -115,12 +124,22 @@
 		F625F6311CC9DECA00744AF5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F642E05C1CCE764200F848F8 /* Log */,
 				F625F6321CC9DEEC00744AF5 /* LCGHTTPManager.h */,
 				F625F6331CC9DEEC00744AF5 /* LCGHTTPManager.m */,
 				F6EF401E1CC9E1C8006331A8 /* LCGApiManager.h */,
 				F6EF401F1CC9E1C8006331A8 /* LCGApiManager.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		F642E05C1CCE764200F848F8 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				F642E05D1CCE764200F848F8 /* NSObject+Log.h */,
+				F642E05E1CCE764200F848F8 /* NSObject+Log.m */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 		F6695EBA1CC91C3700A917B0 = {
@@ -201,6 +220,8 @@
 			children = (
 				F66F6A4B1CC9C2F500470FB3 /* LCGHeadLineController.h */,
 				F66F6A4C1CC9C2F500470FB3 /* LCGHeadLineController.m */,
+				F642E0591CCE72D900F848F8 /* LCGNewsController.h */,
+				F642E05A1CCE72D900F848F8 /* LCGNewsController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,6 +231,8 @@
 			children = (
 				F6EF40251CCA1E76006331A8 /* LCGHeadLineModel.h */,
 				F6EF40261CCA1E76006331A8 /* LCGHeadLineModel.m */,
+				F61FD14F1CCE6A3F0019118F /* LCGNewsModel.h */,
+				F61FD1501CCE6A3F0019118F /* LCGNewsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -410,10 +433,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F625F6341CC9DEEC00744AF5 /* LCGHTTPManager.m in Sources */,
+				F642E05B1CCE72D900F848F8 /* LCGNewsController.m in Sources */,
+				F642E05F1CCE764200F848F8 /* NSObject+Log.m in Sources */,
 				F6EF40271CCA1E76006331A8 /* LCGHeadLineModel.m in Sources */,
 				F66F6A501CC9C83300470FB3 /* LCGHeadLineCell.m in Sources */,
 				F6695ECB1CC91C3700A917B0 /* AppDelegate.m in Sources */,
 				F66F6A4D1CC9C2F500470FB3 /* LCGHeadLineController.m in Sources */,
+				F61FD1511CCE6A3F0019118F /* LCGNewsModel.m in Sources */,
 				F6695EC81CC91C3700A917B0 /* main.m in Sources */,
 				F6EF40201CC9E1C8006331A8 /* LCGApiManager.m in Sources */,
 			);

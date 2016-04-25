@@ -16,6 +16,7 @@
     static LCGHTTPManager *instance;
     dispatch_once(&onceToken, ^{
         instance = [[self alloc]initWithBaseURL:LCGBaseURL sessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+        instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html",  nil];
     });
     return instance;
 }
