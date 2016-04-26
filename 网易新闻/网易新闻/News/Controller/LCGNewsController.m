@@ -10,6 +10,7 @@
 #import "LCGNewsModel.h"
 #import "LCGNewsCell.h"
 
+
 @interface LCGNewsController ()
 @property (nonatomic,strong) NSArray *data;
 
@@ -25,7 +26,7 @@
 
 - (void)loadData {
 
-    [LCGNewsModel newsDatasWithURL:@"article/headline/T1348647853363/0-20.html" success:^(NSArray *news) {
+    [LCGNewsModel newsDatasWithURL:[NSString stringWithFormat:@"article/headline/%@/0-20.html",self.channelId] success:^(NSArray *news) {
         self.data = news;
         
         [self.tableView reloadData];

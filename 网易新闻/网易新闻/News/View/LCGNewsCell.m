@@ -36,7 +36,7 @@
 - (void)setNews:(LCGNewsModel *)news {
     _news = news;
     
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:news.imgsrc]];
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:news.imgsrc]placeholderImage:nil options:SDWebImageRetryFailed | SDWebImageLowPriority];
     
     self.titleLabel.text = news.title;
     
@@ -47,7 +47,7 @@
     if (news.imgextra != nil) {
         [self.imgextra enumerateObjectsUsingBlock:^(UIImageView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             LCGNewsImageModel *model = news.imgextra[idx];
-            [obj sd_setImageWithURL:[NSURL URLWithString:model.imgsrc]];
+            [obj sd_setImageWithURL:[NSURL URLWithString:model.imgsrc]placeholderImage:nil options:SDWebImageRetryFailed | SDWebImageLowPriority];
         }];
     }
 }
@@ -68,7 +68,7 @@
     if (news.imgextra != nil) {
         return 130;
     }else if (news.imgType == 1) {
-        return 150;
+        return 180;
     }else {
         return 81;
     }
