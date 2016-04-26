@@ -11,6 +11,10 @@
 		F60BEE001CCEF82D00EB6C1A /* LCGNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F60BEDFF1CCEF82D00EB6C1A /* LCGNewsCell.m */; };
 		F60BEE031CCF0E6200EB6C1A /* LCGNewsImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F60BEE021CCF0E6200EB6C1A /* LCGNewsImageModel.m */; };
 		F60BEE051CCF1DBE00EB6C1A /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = F60BEE041CCF1DBE00EB6C1A /* topic_news.json */; };
+		F60BEE0F1CCF55FC00EB6C1A /* LCGChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F60BEE0D1CCF55FC00EB6C1A /* LCGChannelModel.m */; };
+		F60BEE111CCF562A00EB6C1A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F60BEE101CCF562A00EB6C1A /* Home.storyboard */; };
+		F60BEE141CCF567800EB6C1A /* LCGHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F60BEE131CCF567800EB6C1A /* LCGHomeController.m */; };
+		F60BEE1A1CCF5A0500EB6C1A /* LCGChannelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F60BEE191CCF5A0500EB6C1A /* LCGChannelLabel.m */; };
 		F61FD1511CCE6A3F0019118F /* LCGNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F61FD1501CCE6A3F0019118F /* LCGNewsModel.m */; };
 		F625F6341CC9DEEC00744AF5 /* LCGHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F625F6331CC9DEEC00744AF5 /* LCGHTTPManager.m */; };
 		F642E05B1CCE72D900F848F8 /* LCGNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F642E05A1CCE72D900F848F8 /* LCGNewsController.m */; };
@@ -24,6 +28,7 @@
 		F66F6A4A1CC9C27600470FB3 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F66F6A491CC9C27600470FB3 /* News.storyboard */; };
 		F66F6A4D1CC9C2F500470FB3 /* LCGHeadLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66F6A4C1CC9C2F500470FB3 /* LCGHeadLineController.m */; };
 		F66F6A501CC9C83300470FB3 /* LCGHeadLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F66F6A4F1CC9C83300470FB3 /* LCGHeadLineCell.m */; };
+		F69EE9AC1CCF901B0073962E /* LCGChannelNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F69EE9AB1CCF901B0073962E /* LCGChannelNewsCell.m */; };
 		F6EF40201CC9E1C8006331A8 /* LCGApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EF401F1CC9E1C8006331A8 /* LCGApiManager.m */; };
 		F6EF40271CCA1E76006331A8 /* LCGHeadLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EF40261CCA1E76006331A8 /* LCGHeadLineModel.m */; };
 /* End PBXBuildFile section */
@@ -54,6 +59,13 @@
 		F60BEE011CCF0E6200EB6C1A /* LCGNewsImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGNewsImageModel.h; sourceTree = "<group>"; };
 		F60BEE021CCF0E6200EB6C1A /* LCGNewsImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGNewsImageModel.m; sourceTree = "<group>"; };
 		F60BEE041CCF1DBE00EB6C1A /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		F60BEE0C1CCF55FC00EB6C1A /* LCGChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGChannelModel.h; sourceTree = "<group>"; };
+		F60BEE0D1CCF55FC00EB6C1A /* LCGChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGChannelModel.m; sourceTree = "<group>"; };
+		F60BEE101CCF562A00EB6C1A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		F60BEE121CCF567800EB6C1A /* LCGHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGHomeController.h; sourceTree = "<group>"; };
+		F60BEE131CCF567800EB6C1A /* LCGHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGHomeController.m; sourceTree = "<group>"; };
+		F60BEE181CCF5A0500EB6C1A /* LCGChannelLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGChannelLabel.h; sourceTree = "<group>"; };
+		F60BEE191CCF5A0500EB6C1A /* LCGChannelLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGChannelLabel.m; sourceTree = "<group>"; };
 		F61FD14F1CCE6A3F0019118F /* LCGNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGNewsModel.h; sourceTree = "<group>"; };
 		F61FD1501CCE6A3F0019118F /* LCGNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGNewsModel.m; sourceTree = "<group>"; };
 		F625F6321CC9DEEC00744AF5 /* LCGHTTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGHTTPManager.h; sourceTree = "<group>"; };
@@ -80,6 +92,8 @@
 		F66F6A4C1CC9C2F500470FB3 /* LCGHeadLineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGHeadLineController.m; sourceTree = "<group>"; };
 		F66F6A4E1CC9C83300470FB3 /* LCGHeadLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGHeadLineCell.h; sourceTree = "<group>"; };
 		F66F6A4F1CC9C83300470FB3 /* LCGHeadLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGHeadLineCell.m; sourceTree = "<group>"; };
+		F69EE9AA1CCF901B0073962E /* LCGChannelNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGChannelNewsCell.h; sourceTree = "<group>"; };
+		F69EE9AB1CCF901B0073962E /* LCGChannelNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGChannelNewsCell.m; sourceTree = "<group>"; };
 		F6EF401E1CC9E1C8006331A8 /* LCGApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGApiManager.h; sourceTree = "<group>"; };
 		F6EF401F1CC9E1C8006331A8 /* LCGApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCGApiManager.m; sourceTree = "<group>"; };
 		F6EF40251CCA1E76006331A8 /* LCGHeadLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCGHeadLineModel.h; sourceTree = "<group>"; };
@@ -129,6 +143,46 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F60BEE091CCF55FC00EB6C1A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F60BEE0A1CCF55FC00EB6C1A /* Controller */,
+				F60BEE0B1CCF55FC00EB6C1A /* Model */,
+				F60BEE0E1CCF55FC00EB6C1A /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F60BEE0A1CCF55FC00EB6C1A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F60BEE121CCF567800EB6C1A /* LCGHomeController.h */,
+				F60BEE131CCF567800EB6C1A /* LCGHomeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F60BEE0B1CCF55FC00EB6C1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F60BEE0C1CCF55FC00EB6C1A /* LCGChannelModel.h */,
+				F60BEE0D1CCF55FC00EB6C1A /* LCGChannelModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F60BEE0E1CCF55FC00EB6C1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F60BEE101CCF562A00EB6C1A /* Home.storyboard */,
+				F69EE9AA1CCF901B0073962E /* LCGChannelNewsCell.h */,
+				F69EE9AB1CCF901B0073962E /* LCGChannelNewsCell.m */,
+				F60BEE181CCF5A0500EB6C1A /* LCGChannelLabel.h */,
+				F60BEE191CCF5A0500EB6C1A /* LCGChannelLabel.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F625F6311CC9DECA00744AF5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +229,7 @@
 		F6695EC51CC91C3700A917B0 /* 网易新闻 */ = {
 			isa = PBXGroup;
 			children = (
+				F60BEE091CCF55FC00EB6C1A /* Home */,
 				F625F6311CC9DECA00744AF5 /* Tools */,
 				F66F6A451CC9C25100470FB3 /* News */,
 				F6695EC91CC91C3700A917B0 /* AppDelegate.h */,
@@ -371,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6695ED61CC91C3700A917B0 /* LaunchScreen.storyboard in Resources */,
+				F60BEE111CCF562A00EB6C1A /* Home.storyboard in Resources */,
 				F66F6A4A1CC9C27600470FB3 /* News.storyboard in Resources */,
 				F60BEE051CCF1DBE00EB6C1A /* topic_news.json in Resources */,
 				F6695ED31CC91C3700A917B0 /* Assets.xcassets in Resources */,
@@ -452,12 +508,16 @@
 				F6EF40271CCA1E76006331A8 /* LCGHeadLineModel.m in Sources */,
 				F66F6A501CC9C83300470FB3 /* LCGHeadLineCell.m in Sources */,
 				F6695ECB1CC91C3700A917B0 /* AppDelegate.m in Sources */,
+				F60BEE1A1CCF5A0500EB6C1A /* LCGChannelLabel.m in Sources */,
 				F66F6A4D1CC9C2F500470FB3 /* LCGHeadLineController.m in Sources */,
+				F60BEE0F1CCF55FC00EB6C1A /* LCGChannelModel.m in Sources */,
 				F60BEE001CCEF82D00EB6C1A /* LCGNewsCell.m in Sources */,
 				F61FD1511CCE6A3F0019118F /* LCGNewsModel.m in Sources */,
+				F69EE9AC1CCF901B0073962E /* LCGChannelNewsCell.m in Sources */,
 				F60BEE031CCF0E6200EB6C1A /* LCGNewsImageModel.m in Sources */,
 				F6695EC81CC91C3700A917B0 /* main.m in Sources */,
 				F6EF40201CC9E1C8006331A8 /* LCGApiManager.m in Sources */,
+				F60BEE141CCF567800EB6C1A /* LCGHomeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
