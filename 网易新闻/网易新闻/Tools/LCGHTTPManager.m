@@ -7,7 +7,7 @@
 //
 
 #import "LCGHTTPManager.h"
-#define LCGBaseURL [NSURL URLWithString:@"http://c.m.163.com/nc/"]
+#define LCGBaseURL [NSURL URLWithString:@"http://c.3g.163.com/nc/"]
 
 @implementation LCGHTTPManager
 + (instancetype)sharedManager {

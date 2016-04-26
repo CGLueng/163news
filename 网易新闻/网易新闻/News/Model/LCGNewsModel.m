@@ -9,8 +9,14 @@
 #import "LCGNewsModel.h"
 #import "LCGApiManager.h"
 #import <YYModel.h>
+#import "LCGNewsImageModel.h"
 
 @implementation LCGNewsModel
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    // value should be Class or Class name.
+    return @{@"imgextra" : [LCGNewsImageModel class]
+             };
+}
 
 + (void)newsDatasWithURL:(NSString *)url success:(void(^)(NSArray *news))success {
     NSAssert(success != nil, @"回调不能为空");
@@ -20,7 +26,7 @@
         NSData *data = responseObject[key];
         
         NSArray *tmp = [NSArray yy_modelArrayWithClass:self json:data];
-        
+//        NSLog(@"%@",tmp);
         NSMutableArray *news = [NSMutableArray arrayWithArray:tmp];
         
 //        [news removeObjectAtIndex:0];

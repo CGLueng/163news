@@ -8,6 +8,7 @@
 
 #import "LCGHeadLineCell.h"
 #import "LCGHeadLineModel.h"
+#import "LCGNewsModel.h"
 #import <UIImageView+WebCache.h>
 
 @interface LCGHeadLineCell ()
@@ -20,4 +21,6 @@
     _headline = headline;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:headline.imgsrc]];
 }
+
+
 @end

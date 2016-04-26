@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+@class LCGNewsImageModel;
 
 @interface LCGNewsModel : NSObject
 @property (nonatomic ,copy) NSString *replyCount;
-@property (nonatomic ,copy) NSString *ltitle;
+@property (nonatomic ,copy) NSString *title;
 @property (nonatomic ,copy) NSString *digest;
 @property (nonatomic ,copy) NSString *imgsrc;
+@property (nonatomic,strong) NSArray<LCGNewsImageModel *> *imgextra;
+@property (nonatomic ,assign) NSInteger imgType;
 //
 + (void)newsDatasWithURL:(NSString *)url success:(void(^)(NSArray *news))success;
 @end
