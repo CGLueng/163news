@@ -11,4 +11,5 @@
 
 @interface LCGChannelNewsCell : UICollectionViewCell
 @property (nonatomic,strong) LCGChannelModel *channel;
+
 @end

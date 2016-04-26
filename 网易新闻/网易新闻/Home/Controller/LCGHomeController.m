@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *layout;
 @property (nonatomic,strong) NSArray *channels;
+@property (nonatomic,assign) NSInteger currentPage;
 @end
 
 @implementation LCGHomeController
@@ -86,6 +87,10 @@
         [self.scrollView addSubview:label];
         
         labelX += labelW;
+        
+        if (idx == 0) {
+            label.scale = 1;
+        }
 
     }];
     
@@ -108,5 +113,44 @@
     
     cell.channel = self.channels[indexPath.item];
     return cell;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    LCGChannelLabel *currentChannel = self.scrollView.subviews[self.currentPage];
+    
+    __block LCGChannelLabel *nextChannel;
+    
+    NSArray *indexPaths = [self.collectionView indexPathsForVisibleItems];
+    
+    [indexPaths enumerateObjectsUsingBlock:^(NSIndexPath * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+       
+        if (obj.item != self.currentPage) {
+            nextChannel = self.scrollView.subviews[obj.item];
+        }
+    }];
+    
+    if (nextChannel == nil) {
+        NSLog(@"没有下一个频道");
+        return;
+    }
+    
+    
+    CGFloat offsetX = scrollView.contentOffset.x;
+    
+    CGFloat scale = ABS(offsetX / scrollView.bounds.size.width - self.currentPage);
+    
+    CGFloat currentScale = 1- scale;
+    
+    nextChannel.scale = scale;
+    
+    currentChannel.scale = currentScale;
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    CGFloat offsetX = scrollView.contentOffset.x;
+    
+    self.currentPage = (NSInteger)offsetX / scrollView.bounds.size.width;
 }
 @end
