@@ -21,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-154.13333333333333" y="313.34666666666664"/>
         </scene>
-        <!--Home Controller-->
+        <!--新闻乱播-->
         <scene sceneID="gHw-xK-7zI">
             <objects>
                 <viewController id="lco-Tf-jOl" customClass="LCGHomeController" sceneMemberID="viewController">
@@ -75,7 +75,7 @@
                             <constraint firstItem="yq4-TL-WJX" firstAttribute="leading" secondItem="mWf-xb-RXO" secondAttribute="leading" id="cDT-UQ-lpp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7un-ag-hLs"/>
+                    <navigationItem key="navigationItem" title="新闻乱播" id="7un-ag-hLs"/>
                     <connections>
                         <outlet property="collectionView" destination="yq4-TL-WJX" id="WH2-Q4-7ur"/>
                         <outlet property="layout" destination="3bg-0w-2U2" id="dw4-PK-b4H"/>

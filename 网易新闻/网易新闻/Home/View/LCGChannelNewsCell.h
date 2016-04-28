@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class LCGChannelModel;
+//@class LCGChannelModel;
+@class LCGNewsController;
 
 @interface LCGChannelNewsCell : UICollectionViewCell
-@property (nonatomic,strong) LCGChannelModel *channel;
-
+//@property (nonatomic,strong) LCGChannelModel *channel;
+@property (nonatomic,strong) LCGNewsController *news;
 @end

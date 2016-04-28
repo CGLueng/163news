@@ -11,7 +11,7 @@
 
 @implementation LCGApiManager
 + (instancetype)sharedApi {
-    
+    //创建一个单例
     static dispatch_once_t onceToken;
     static id instance;
     dispatch_once(&onceToken, ^{
@@ -39,13 +39,15 @@
  *  @param error   错误后的回调
  */
 - (void)mainRequestMethodWithURL:(NSString *)url success:(void(^)(id responseObject))success error:(void(^)(NSError *errorInfo))error {
-    
+    //调用LCGHTTPManager工具类的 GET 方法
     [[LCGHTTPManager sharedManager]GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
+            //成功就把参数responseObject传回去，实现 block 方法
             success(responseObject);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull errorInfo) {
         if (error) {
+            //失败就把参数errorInfo传回去，实现 block 方法
             error(errorInfo);
         }
     }];

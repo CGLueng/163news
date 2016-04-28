@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface LCGNewsImageModel : NSObject
+//图片
 @property (nonatomic ,copy) NSString *imgsrc;
 @end

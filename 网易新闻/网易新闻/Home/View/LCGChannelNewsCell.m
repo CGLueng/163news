@@ -11,25 +11,25 @@
 #import "LCGNewsController.h"
 
 @interface LCGChannelNewsCell ()
-@property (nonatomic,strong) LCGNewsController *news;
+//@property (nonatomic,strong) LCGNewsController *news;
 @end
 
 @implementation LCGChannelNewsCell
 
--(void)setChannel:(LCGChannelModel *)channel {
-
-    _channel = channel;
-    
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"News" bundle:nil];
-    
-    LCGNewsController *news = [sb instantiateInitialViewController];
-    
-    news.channelId = channel.tid;
-    
-    [self.contentView addSubview:news.view];
-    
-    news.view.frame = self.contentView.bounds;
-    
-    self.news = news;
-}
+//-(void)setChannel:(LCGChannelModel *)channel {
+//
+//    _channel = channel;
+//    
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"News" bundle:nil];
+//    
+//    LCGNewsController *news = [sb instantiateInitialViewController];
+//    
+//    news.channelId = channel.tid;
+//    
+//    [self.contentView addSubview:news.view];
+//    
+//    news.view.frame = self.contentView.bounds;
+//    
+//    self.news = news;
+//}
 @end

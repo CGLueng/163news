@@ -16,9 +16,15 @@
 @end
 
 @implementation LCGHeadLineCell
+/**
+ *  重写 set 方法
+ *
+ *  @param headline 传进一个 headline 模型
+ */
 - (void)setHeadline:(LCGHeadLineModel *)headline {
 
     _headline = headline;
+    //用第三方框架<UIImageView+WebCache.h>的方法下载图片
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:headline.imgsrc]];
 }
 

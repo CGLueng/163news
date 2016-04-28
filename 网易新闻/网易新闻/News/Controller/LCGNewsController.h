@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LCGNewsController : UITableViewController
+//频道 id
 @property (nonatomic ,copy) NSString *channelId;
 @end

@@ -10,6 +10,7 @@
 @class LCGHeadLineModel;
 
 @interface LCGHeadLineCell : UICollectionViewCell
+//头条模型
 @property (nonatomic,strong) LCGHeadLineModel *headline;
 
 @end
